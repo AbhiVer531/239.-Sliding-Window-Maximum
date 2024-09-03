@@ -1,0 +1,11 @@
+class Solution:
+    def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
+        L = 0
+        R = k-1
+        output = []
+        while R < len(nums):
+            maxin = max(nums[L:R+1])
+            output.append(maxin)
+            L = L+1
+            R=R+1
+        return output
